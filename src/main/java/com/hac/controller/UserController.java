@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.RestController;
  * @date 2024/12/19 11:42
  */
 @RestController
-@RequestMapping
+@RequestMapping(value = "/api")
 public class UserController {
-    @GetMapping(value = "/user")
+    @GetMapping()
     public User user() {
         User user = new User("tom", 32);
         return user;
