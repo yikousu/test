@@ -21,4 +21,17 @@ public class EmployeeController {
         return employees;
     }
 
+    // 2. 根据 ID 获取单个员工的接口
+    @GetMapping("/{id}")
+    public Employee getEmployeeById(@PathVariable Long id) {
+        // 返回假数据
+        return new Employee(id, "张三", "软件工程师", 12000.0);
+    }
+
+    // 3. 创建新员工的接口
+    @PostMapping
+    public String createEmployee(@RequestBody Employee employee) {
+        // 返回假数据
+        return "创建新员工成功: " + employee.toString();
+    }
 }
