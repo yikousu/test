@@ -20,7 +20,7 @@ public class OrderController {
     public List<Order> user() {
         List<Order> list = new ArrayList<>();
         // 模拟数据库拿数据
-        list.add(new Order("1", "1", "1", 1, 1.0));
+        list.add(new Order(1L, 1L, 1L, 1, 1.0));
         return list;
     }
 }

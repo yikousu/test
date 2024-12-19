@@ -2,9 +2,7 @@ package com.hac.pojo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-
-import java.io.Serial;
-import java.io.Serializable;
+import lombok.NoArgsConstructor;
 
 /**
  * @author hac
@@ -12,10 +10,16 @@ import java.io.Serializable;
  */
 @Data
 @AllArgsConstructor
-public class Order implements Serializable {
-    private Long orderId;
+@NoArgsConstructor
+public class ShoppingCart {
+
+    // 随便写的 测试
+    private Long id;
     private Long userId;
     private Long productId;
     private Integer quantity;
     private Double totalPrice;
+    private String productName;
+    private Double price;
+
 }
