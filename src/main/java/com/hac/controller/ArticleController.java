@@ -17,4 +17,15 @@ public class ArticleController {
     public String getAllArticles() {
         return "返回所有文章的假数据";
     }
+
+
+    @GetMapping("/articles/{id}")
+    public String getArticleById(@PathVariable Long id) {
+        return "返回 ID 为 " + id + " 的文章的假数据";
+    }
+
+    @PostMapping("/articles")
+    public String createArticle(@RequestBody String content) {
+        return "创建新文章，内容为: " + content;
+    }
 }
